@@ -1,0 +1,17 @@
+#Ignore all dot files
+.idea/
+*.iml
+*.ipr
+*.iws
+**/target/
+*~
+work
+app.properties
+
+node/
+node_modules/
+npm-debug.log
+
+**/.settings/
+**/.project
+**/.classpath

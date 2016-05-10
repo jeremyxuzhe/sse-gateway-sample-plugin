@@ -1,0 +1,15 @@
+<?jelly escape-by-default='true'?>
+<l:html norefresh="true" title="${it.displayName}" xmlns:st="jelly:stapler" xmlns:l="/lib/layout">
+  
+  <!-- The polyfill is needed for Internet Explorer (of course) -->
+  <st:adjunct includes="org.jenkinsci.plugins.ssegateway.sse.EventSource" />
+  
+  <l:main-panel>
+    <h1>SSE Gateway Sample</h1>
+    The following window continuously logs "Job" channel events that are happening in the underlying Jenkins instance.
+    <p/>
+    Create a few jobs that pass and fail (in another window), run them and then watch this window in parallel.
+    <div id="event-logs"></div>
+    <st:adjunct includes="org.jenkins.ui.jsmodules.sse_gateway_sample.sse-gateway-sample" />
+  </l:main-panel>
+</l:html>
