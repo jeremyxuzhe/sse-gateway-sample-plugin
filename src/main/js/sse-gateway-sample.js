@@ -8,6 +8,10 @@ $(document).ready(function start() {
         var runId;
         var run;
 
+        // Look at the browser console to see all the events
+        // and their contents.
+        console.log(event);
+
         if (event.jenkins_event === 'job_run_started') {
             runId = 'job_' + event.job_name + '_run_' + event.jenkins_object_id;
             run = $('<div class="run">');
